@@ -56,3 +56,51 @@ body{
 		transform: translate(-50%, -50%);
 		font-size: 25px;
 }
+
+@media  screen and (max-width: 1200px) {
+	.main {
+		font-size: 75px;
+	}
+
+	#dateDisplay{
+		font-size: 55px;
+		top: 63%;
+	}
+}
+
+@media  screen and (max-width: 960px) {
+	.main {
+		font-size: 65px;
+	}
+
+	#dateDisplay{
+		font-size: 45px;
+	}
+
+	#sky{
+		width: 100%;
+		height: 200%;
+	}
+}
+
+@media  screen and (max-width: 768px) {
+	.main {
+		font-size: 50px;
+	}
+
+	#dateDisplay{
+		font-size: 40px;
+	}
+}
+
+@media  screen and (max-width: 560px) {
+	.main {
+		font-size: 40px;
+	}
+
+	#dateDisplay{
+		font-size: 25px;
+	}
+}
+
+
