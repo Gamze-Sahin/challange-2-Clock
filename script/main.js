@@ -1,3 +1,5 @@
+window.onload = function() {
+
 //klok
 function showTime(){
     var date = new Date();
@@ -38,38 +40,26 @@ function showTime(){
 
 showTime();
 
-//verandering kleuren en tijd van de klok
-function backgroundColor() {
-    var background = document.getElementsByTagName('body')[0];
-      var currentTime = new Date().getHours();
+//verandering achtergrond en tijd van de klok
+var background = document.getElementById('sky');
+var currentTime = new Date().getHours();
 
-      //nacht
+function backgroundSky() {
+    
     if (0 <= currentTime&&currentTime < 5) {
-        document.body.style.backgroundColor = "#ffd1c1";
-        document.getElementById("clockDisplay").style.color = "#FFFFFF";
-        document.getElementById("dateDisplay").style.color = "#FFFFFF";
-      }
-      
-      //ochtend
-    if (5 <= currentTime&&currentTime < 11) {
-        document.body.style.backgroundColor = "#ffd1c11";
-        document.getElementById("clockDisplay").style.color = "#FFFFFF";
-        document.getElementById("dateDisplay").style.color = "#FFFFFF";
-      }
-      
-      //middag
-    if (11 <= currentTime&&currentTime < 17) {
-        document.body.style.backgroundColor = "#ffd1c1";
-        document.getElementById("clockDisplay").style.color = "#FFFFFF";
-        document.getElementById("dateDisplay").style.color = "#FFFFFF";
-      }
-      
-      //avond
-    if (17 <= currentTime&&currentTime < 24) {
-       document.body.style.backgroundColor = "#ffd1c1";
-       document.getElementById("clockDisplay").style.color = "#FFFFFF";
-       document.getElementById("dateDisplay").style.color = "#FFFFFF";
-      }
+      background.style.backgroundImage= 'url("images/bgavond.jpg")';
+    } else if (5 <= currentTime&&currentTime < 12) {
+       background.style.backgroundImage= 'url("images/bgdag.jpg")';
+    } else if (12 <= currentTime&&currentTime < 18) {
+      background.style.backgroundImage= 'url("images/bgmiddag.jpg")';
+    } else if (18 <= currentTime&&currentTime < 21) {
+      background.style.backgroundImage= 'url("images/bgevening.jpg")';
+    } else if (21 <= currentTime&&currentTime < 24){
+      background.style.backgroundImage= 'url("images/bgavond.jpg")';
+    }
+
 }
 
-backgroundColor();
+backgroundSky();
+
+}
