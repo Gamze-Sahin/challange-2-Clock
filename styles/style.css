@@ -13,22 +13,6 @@ body{
 	height: 100%;
 }
 
-.planet{
-	position: fixed;
-	z-index: 1;
-	animation: 3s linear 1s infinite running slidein;
-}
-
-@keyframes slidein {
-	from {
-		left: 0;
-	}
-
-	to {
-		left: 100vw;
-	}
-}
-
 #sky {
 	background-image: url("../images/bgmiddag.jpg");
 	width: 100%;
@@ -37,6 +21,7 @@ body{
 	resize: both;
 	z-index: -1;
 	animation: slide 120s linear infinite;
+	position: absolute;
 }
 
 @keyframes slide {
@@ -76,6 +61,27 @@ body{
 		font-size: 60px;
 }
 
+.planet{
+	position: absolute;
+	z-index: 1;
+	animation: slidein 3s linear infinite;
+}
+
+.planet img {
+	width: 65%;
+	height: 65%;
+}
+
+@keyframes slidein {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: 100vw;
+	}
+}
+
 @media  screen and (max-width: 1200px) {
 	.main {
 		font-size: 75px;
@@ -85,6 +91,12 @@ body{
 		font-size: 55px;
 		top: 63%;
 	}
+
+	.planet img {
+	width: 60%;
+	height: 60%;
+	}
+
 }
 
 @media  screen and (max-width: 960px) {
@@ -101,6 +113,11 @@ body{
 		resize: both;
 
 	}
+
+	.planet img {
+	width: 55%;
+	height: 55%;
+	}
 }
 
 @media  screen and (max-width: 768px) {
@@ -111,6 +128,11 @@ body{
 	#dateDisplay{
 		font-size: 40px;
 	}
+
+	.planet img {
+	width: 50%;
+	height: 50%;
+	}
 }
 
 @media  screen and (max-width: 560px) {
@@ -120,6 +142,11 @@ body{
 
 	#dateDisplay{
 		font-size: 25px;
+	}
+
+	.planet img {
+	width: 45%;
+	height: 45%;
 	}
 }
 
